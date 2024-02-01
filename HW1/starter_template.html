@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <!--
+      The HTML viewport is the area of a web page that is visible to the user. It is typically 
+      smaller than the actual size of the page, and can be resized by the user using the browser's 
+      scrollbars. The viewport is important for responsive web design, as it allows web pages to be 
+      displayed correctly on a variety of devices with different screen sizes.
+
+      The HTML viewport is controlled by the <meta> viewport tag, which can be placed in the 
+      head of the HTML document. The tag has a number of properties that can be used to control 
+      the size, scaling, and orientation of the viewport. Some of the most common properties are:
+
+        width:         This property sets the width of the viewport in pixels.
+        initial-scale: This property sets the initial zoom level of the viewport.
+        maximum-scale: This property sets the maximum zoom level of the viewport.
+        minimum-scale: This property sets the minimum zoom level of the viewport.
+        user-scalable: This property indicates whether the user can scale the viewport using 
+                       the browser's scrollbars.
+        
+        The HTML viewport is a powerful tool that can be used to improve the user experience of 
+        your web pages. By carefully controlling the viewport, you can ensure that your pages 
+        are displayed correctly on a variety of devices, regardless of their screen size or 
+        orientation.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hobbies</title>
+
+    <!-- An integrity attribute is used to allow the browser to check the file source to ensure 
+         that the code is never loaded if the source has been manipulated -->
+
+    <!-- When the request doesn't match Same Origin Policy the crossorigin attribute MUST be 
+         present for the integrity of the file to be checked. With an integrity set on an external 
+         origin and a missing crossorigin the browser will choose to 'fail-open' which means it will 
+         load the resource as if the integrity attribute was not set.-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+  <body>
+    <h1>My Hobbies</h1>
+    
+    <ul>
+          <li><a href="#hobby1" class="hobby">Hobby 1: Sing</a></li>
+          <li><a href="#hobby2" class="hobby">Hobby 2: Dance</a></li>
+          <li><a href="#hobby3" class="hobby">Hobby 3: Rap</a></li>
+    </ul>
+    <div class="content">
+    <div id="hobby1">
+          <h2 class="hobby">Hobby 1: Sing</h2>
+          <p class="hobby-description">
+            I like singing very much. Whenever I have free time, I sing some of my favorite songs. I like all types of music, from pop to classical. I also like to try different singing techniques and styles. Singing makes me feel relaxed and helps me release stress. I also like to sing with my friends and we often go to karaoke together.
+          </p>
+          <img src="https://cdn.jsdelivr.net/gh/shioryyy/image/test/202401251510317.png" alt="sing" width="400" height="300"/>
+        </div>
+
+        <div id="hobby2">
+          <h2 class="hobby">Hobby 2: Dance</h2>
+          <p class="hobby-description">
+            Dancing is another big passion of mine. I love all types of dance, from street dance to ballet. I regularly attend dance classes to improve my dancing skills. Dancing not only keeps me fit but also makes me happy. I like to express my emotions in dance and I also like to watch other people dance and get inspiration from their dances.
+          </p>
+          <img src="https://cdn.jsdelivr.net/gh/shioryyy/image/test/202401251505275.png" alt="dance" width="400" height="300"/>
+        </div>
+
+        <div id="hobby3">
+          <h2 class="hobby">Hobby 3: Rap</h2>
+          <p class="hobby-description">
+            I also really like rap. I love the beats and rhymes of rap and I love the depth and meaning of rap lyrics. I often write my own rap lyrics at home and experiment with different genres and styles. I also like to listen to a variety of different rap artists and get inspiration from their music. Rap is a form of self-expression and an art form for me.
+          </p>
+          <img src="https://cdn.jsdelivr.net/gh/shioryyy/image/test/202401251509720.png" alt="rap" width="400" height="300"/>
+        </div>
+
+        <hr>
+        <div>
+          just a joke, it's a meme
+        </div>
+    </div>
+    <!--
+      JavaScript code is executed after the page has been loaded. If you put the script at the 
+      bottom of the page, the page will load faster because the browser does not have to wait 
+      for the script to load before displaying the page.
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+            crossorigin="anonymous"></script>
+  </body>
+</html>
+
+  

@@ -1,0 +1,23 @@
+.hobby {
+    color: #0000c0;
+    font-weight: bold;
+}
+
+.hobby-description{
+    font-size: 14px;
+    color: #66ccff;
+}
+
+.content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 10px;
+    min-height: 75vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

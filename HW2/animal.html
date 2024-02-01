@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zodiac Animal Calculator</title>
+</head>
+<body>
+    <h1>Zodiac Animal Calculator</h1>
+    <label>Enter a year:</label>
+    <input type="number" id="year" name="year" min="1900" max="2099" oninput="calculateZodiacAnimal()">
+    <p id="result"></p>
+    <p id="description"></p>
+    <img id="zodiacImage" src="" alt="Zodiac Animal Image" style="display: none; width: 100px; height: 100px;">
+    <button onclick="resetCalculator()">Reset</button>
+
+    <script>
+        function calculateZodiacAnimal() {
+            var yearInput = document.getElementById("year").value;
+            if(yearInput >= 1000 && yearInput <= 9999) {
+            var zodiacAnimals = ["Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Goat", "Monkey", "Rooster", "Dog", "Pig"];
+            var zodiacDescriptions = {
+                "Rat": "People born in the year of the Rat like saving and collecting. They never have hard times financially and live organized lives. If you receive a valuable gift from a Rat, know that he thinks highly of you, because he doesn't usually like opening his wallet for others. Rats don't look for praise and recognition. They are very sensitive and know when there is trouble. When they do take risks, they're usually successful.",
+                "Ox": "People born in the year of the Ox are hard workers and have a strong sense of responsibility. Even if they run into difficulty during work, they'll persevere through. They aren't very romantic, but are patient and would never force themselves onto someone who doesn't like them. They are usually quiet and keep their emotions bottled up inside. It's hard for others to understand them. When they do lose their temper, it's like an explosion and can drive others away.",
+                "Tiger": "People born in the year of the Tiger are independent and have high self-esteem. They enjoy being the leader and protector of average people. They love justice and never back down in an argument. Recklessness is their biggest weakness, causing them to fail. However, they never truly fail. Tigers will always find a way to stand back up and succeed in the end.",
+                "Rabbit": "People born in the year of the Rabbit are gentle, quiet and polite. They are patient, intelligent and chic. Their sense of responsibility and attention to detail lead to great career success. They take love seriously as well, and would never fall for someone easily. If they find the right person, they'll love them to the end of the world and back.",
+                "Dragon": "People born in the year of the Dragon have hearts full of adventure and romance. It's hard for people to understand a Dragon's mysterious personality. At the same time, they are indifferent to things the average person worries about. They may seem lazy, but once they decide to do something, they'll be more ambitious and vigorous than anyone else.",
+                "Snake": "People born in the year of the Snake are idealists. On the outside, they may seem cold but, deep inside, they are warm and enthusiastic. Their desire of exclusive ownership is very fierce. It irks them if they can't fully understand someone. Snakes are devoted and determined, but their worst enemy is laziness.",
+                "Horse": "People born in the year of the Horse are never one to surrender. They are always positive and energetic, pushing themselves forward. Their biggest desire is to have the freedom to do what they like and be able to express themselves. However, they also have various negative traits. Horses are bad at keeping secrets and lose interest quickly.",
+                "Goat": "People born in the year of the Goat have a pure and kind heart. They'd rather suffer silently than argue and ruin someone else's mood. However, even in silence, they still hold onto their own opinion. In regards to their passions, they will do anything possible to fulfill their wishes. Though kind, Goats have tricks up their sleeves as well. They are skilled at using soft power, able to patiently and politely persuade others into their favor.",
+                "Monkey": "People born in the year of the Monkey do things based on interest. If it's something they don't quite care for, they'll do the work sloppily. If it something they're interested in, they'll put their entire heart into it and work until they succeed. They live a long life full of energy and curiosity for the world. Monkeys also value relationships. However, spoiling children may be their weakness.",
+                "Rooster": "People born in the year of the Rooster are able to sense what the other person is thinking or feeling. They have quick reactions and high EQ. They make great friends, although some are cunning. Roosters are creative and talented in the arts, although few find a career in that field. They have foresight and plan everything carefully.",
+                "Dog": "People born in the year of the Dog are conservative and full of justice. Because of their loyalty, Dogs are valued in the workplace. They rarely break rules, except for people important to them. In life, they only wish to live quietly with their family.",
+                "Pig": "People born in the year of the Pig think logically and are able to fix whatever problem they're in. They aren't good communicators, but they're kind and able to provide for the family. Most of them are wealthy. Their only obvious fault is that they lose their temper easily."
+            };
+            var zodiacIndex = (yearInput - 700) % 12;
+            var zodiacAnimal = zodiacAnimals[zodiacIndex];
+            document.getElementById("result").innerHTML = "The zodiac animal for the year " + yearInput + " is <strong>" + zodiacAnimal + "</strong>.";
+            document.getElementById("description").innerHTML = zodiacDescriptions[zodiacAnimal] + "<br><br>Reference: <a href='https://chinesenewyear.net/zodiac/'>https://chinesenewyear.net/zodiac/<a> <br>";
+            document.getElementById("zodiacImage").src = "images/" + zodiacAnimal + ".png";
+            document.getElementById("zodiacImage").style.display = "block";
+        } else {
+            document.getElementById("result").innerHTML = "no data found for that year";
+            document.getElementById("description").innerHTML = "";
+            document.getElementById("zodiacImage").style.display = "none";
+        }
+        }
+
+        function resetCalculator() {
+            document.getElementById("year").value = "";
+            document.getElementById("result").innerHTML = "";
+            document.getElementById("description").innerHTML = "";
+            document.getElementById("zodiacImage").style.display = "none";
+        }
+    </script>
+</body>
+</html>
