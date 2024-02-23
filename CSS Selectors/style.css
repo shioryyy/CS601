@@ -1,0 +1,46 @@
+.paragraph-brown-white {
+    background-color: brown;
+    color: white;
+}
+
+.center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 { font-size: 1em; }
+h2 { font-size: 1.17em; }
+h3 { font-size: 1.33em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.67em; }
+h6 { font-size: 2em; }
+
+span {
+    font-style: italic;
+}
+
+div {
+    margin: 1in;
+}
+
+img[src*="_icon"] {
+    width: 20px;
+    height: 20px;
+}
+
+p[alt] {
+    margin-top: 17vh;
+}
+
+td, th {
+    border: 1px solid black;
+}
+
+li {
+    list-style-type: none;
+}
+
+h1 {
+    letter-spacing: 2px;
+}

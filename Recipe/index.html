@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipe Application</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+#recipe-form {
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#recipes-list div {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+#steps-container {
+  margin-bottom: 20px;
+}
+</style>
+</head>
+<body>
+<div id="recipe-form" class="form-control">
+    <input type="text" id="title" placeholder="Recipe Title" class="form-control" required />
+    <br />
+    <textarea id="description" placeholder="Recipe Description" class="form-control" required></textarea>
+    <div id="steps-container" class="form-control">
+        <div id="steps-list"></div>
+        <input type="text" id="step-input" placeholder="Recipe Step" class="form-control" />
+        <button onclick="addStep()" class="btn btn-lg btn-primary">Add Step</button>
+    </div>
+    <input type="url" id="image-url" placeholder="Image URL" class="form-control"/>
+    <button onclick="saveRecipe()" class="btn btn-lg btn-primary">Save Recipe</button>
+</div>
+<div id="recipes-list"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
