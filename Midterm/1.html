@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" id="myInput" oninput="validateInput()">
+
+<p>Input: <span id="displayText"></span></p>
+
+<script>
+function validateInput() {
+  var x = document.getElementById("myInput");
+  x.value = x.value.replace(/[^a-z]/g, "");
+  var currentValue = x.value;
+  var uniqueValue = '';
+  for (var i = 0; i < currentValue.length; i++) {
+    if (uniqueValue.indexOf(currentValue[i]) === -1) {
+      uniqueValue += currentValue[i];
+    }
+  }
+  x.value = uniqueValue;
+
+  var displayText = document.getElementById("displayText");
+  displayText.innerText = uniqueValue;
+}
+</script>
+
+</body>
+</html>

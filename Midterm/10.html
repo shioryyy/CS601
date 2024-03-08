@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Paragraphs</title>
+<script>
+  function createTimestampParagraphs() {
+    for (let i = 0; i < 3; i++) {
+      const p = document.createElement("p");
+      const now = new Date().toLocaleTimeString();
+      p.textContent = "Timestamp: " + now;
+      document.body.appendChild(p);
+    }
+  }
+
+  function colorParagraphs() {
+    const paragraphs = document.querySelectorAll("p");
+    paragraphs.forEach((paragraph, index) => {
+      if (index % 2 !== 0) {
+        paragraph.style.backgroundColor = "pink";
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    createTimestampParagraphs();
+    colorParagraphs();
+  });
+</script>
+</head>
+<body>
+
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+<p>Paragraph 3</p>
+<p>Paragraph 4</p>
+<p>Paragraph 5</p>
+
+<div>Div 1</div>
+<div>Div 2</div>
+<div>Div 3</div>
+<div>Div 4</div>
+<div>Div 5</div>
+
+</body>
+</html>

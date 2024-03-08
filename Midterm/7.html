@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Picker</title>
+</head>
+<body>
+    <input type="date" id="departing" placeholder="Departing On" onchange="calculate()">
+    <input type="date" id="returning" placeholder="Returning On" onchange="calculate()">
+    <p id="message"></p>
+
+    <script>
+        function calculate() {
+            const departingDate = new Date(document.getElementById('departing').value);
+            const returningDate = new Date(document.getElementById('returning').value);
+
+            if (!isNaN(departingDate) && !isNaN(returningDate)) {
+                const diffTime = Math.abs(returningDate - departingDate);
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+
+                if (returningDate < departingDate) {
+                    document.getElementById('message').innerText = "It appears your dates are inverted. Please correct.";
+                } else if (diffDays === 0) {
+                    document.getElementById('message').innerText = "It appears you are coming back on the same day as your departure. Please make sure this is correct.";
+                } else if (diffDays > 30 && diffDays <= 365) {
+                    document.getElementById('message').innerText = "You have a 30+ day duration. Please make sure your dates are correct.";
+                } else if (diffDays > 365) {
+                    document.getElementById('message').innerText = "It appears your travel duration is greater than 1 year. Please make sure this is correct.";
+                } else {
+                    document.getElementById('message').innerText = `Your travel duration is ${diffDays} days.`;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
