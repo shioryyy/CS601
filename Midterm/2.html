@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+        .outer-container {
+            background-color: #c7d6c9;
+            padding: 10px;
+        }
+      .container {
+        display: flex;
+        flex-direction: row;
+        height: 400px;
+        color: gray;
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box1 {
+        background-color: #f7797a;
+        flex: 1;
+      }
+      .box2 {
+        background-color: #c6fe77;
+        flex: 1;
+      }
+      .box3 {
+        background-color: #fb9ef9;
+        flex: 1;
+        width: 100%;
+      }
+      .box4a,
+      .box4b {
+        background-color: #a4a8ff;
+        flex: 1;
+      }
+      .box4b {
+        margin-top: 5px;
+      }
+      .container2 {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin-left: 5px;
+      }
+      .container3 {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        margin-top: 5px;
+      }
+      .container4 {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer-container">
+    <div class="container">
+      <div class="box box1">1</div>
+      <div class="container2">
+        <div class="box box2">2</div>
+        <div class="container3">
+          <div class="box box3">3</div>
+          <div class="container4">
+            <div class="box box4a">4a</div>
+            <div class="box box4b">4b</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>

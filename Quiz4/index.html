@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weight Converter</title>
+</head>
+<body>
+    <div id="app">
+        <h1 id="title">Weight Converter</h1>
+        <input type="number" id="kilogramInput">
+        <button id="convertBtn">kilogram to pounds</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        const kilogramInput = document.getElementById('kilogramInput');
+        const convertBtn = document.getElementById('convertBtn');
+        const result = document.getElementById('result');
+
+        convertBtn.addEventListener('click', function() {
+            const kilogram = kilogramInput.value;
+            const pounds = kilogram * 2.2;
+            result.innerHTML = `${kilogram} kilogram is equal to ${pounds} pounds`;
+        });
+    </script>
+</body>
+</html>
