@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Zone Converter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="timezoneApp">
+      <div id="editDateTimeModal" class="modal datetime-container">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Date and Time</h2>
+                <span class="close">&times;</span>
+            </div>
+          <div class="modal-body">
+            <div id="selectedTimeZoneDisplay">
+            </div>
+            <label for="dateInput">Set date</label>
+            <input type="date" id="dateInput" />
+
+            <label for="timeInput">Set time</label>
+            <input type="time" id="timeInput" />
+
+            <button id="saveDateTime">Save</button>
+          </div>
+        </div>
+      </div>
+
+    <div id="searchBar" class="searchBar">
+        <label for="search-box">Add Locations</label>
+        <div class="input-container">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by city name or zip code"
+            />
+            <button id="searchButton">Search</button>
+        </div>
+    </div>
+
+      <div
+        id="LosAngeles"
+        class="timezone-info"
+        onclick="openModal('LosAngeles')"
+      >
+        <div>
+          <div>
+            <img src="USflag.png" alt="USA Flag" class="flag" />
+            <span>Los Angeles, CA, USA</span>
+            <span>PST (UTC-8)</span>
+            <div>Thu, Jan25, 2024</div>
+          </div>
+        </div>
+        <span id="LosAngelesTime">3:00 PM</span>
+      </div>
+
+      <div
+        id="SaltLakeCity"
+        class="timezone-info hidden"
+        onclick="openModal('SaltLakeCity')"
+      >
+        <div>
+          <div>
+            <img src="USflag.png" alt="USA Flag" class="flag" />
+            <span>Salt Lake City, UT, USA</span>
+            <span>MST (UTC-7)</span>
+            <div>Thu, Jan25, 2024</div>
+          </div>
+        </div>
+        <span id="SaltLakeCityTime">4:00 PM</span>
+      </div>
+
+      <div id="Houston" class="timezone-info hidden" onclick="openModal('Houston')">
+        <div>
+          <div>
+            <img src="USflag.png" alt="USA Flag" class="flag" />
+            <span>Houston, TX, USA</span>
+            <span>CST (UTC-6)</span>
+            <div>Thu, Jan25, 2024</div>
+          </div>
+        </div>
+        <span id="HoustonTime">5:00 PM</span>
+      </div>
+
+      <div id="Boston" class="timezone-info hidden" onclick="openModal('Boston')">
+        <div>
+          <div>
+            <img src="USflag.png" alt="USA Flag" class="flag" />
+            <span>Boston, MA, USA</span>
+            <span>EST (UTC-5)</span>
+            <div>Thu, Jan25, 2024</div>
+          </div>
+        </div>
+        <span id="BostonTime">6:00 PM</span>
+      </div>
+    </div>
+
+    <p class="footer">OK I finally gave up on unclogging the program logic, the time conversion function of this page is not working properly, I spent dozens of hours checking for logical errors in this and modified it many times, but it still doesn't work as expected
+        If you have a chance I hope the teacher can help me explain what the problem is. Of course, I think time.is is better for me xd.</p>
+
+    <script src="main.js"></script>
+  </body>
+</html>
