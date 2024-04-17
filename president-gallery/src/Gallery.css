@@ -1,0 +1,99 @@
+.buttonClass {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.presidents {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    gap: 1em;
+    padding: 1em;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2 {
+    text-align: center;
+    color: #FFF;
+  }
+  
+  .details-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    margin-bottom: 20px;
+    overflow-y: auto;
+  }
+  
+  .img-container {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .text-container {
+    flex: 2 1 600px; 
+    margin: 20px;
+    max-width: 600px;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 5px;
+    padding: 10px;
+  }
+  
+  li:before {
+    content: open-quote;
+  }
+  
+  li:after {
+    content: close-quote;
+  }
+  
+  @media (max-width: 768px) {
+    .president-details-content {
+      padding: 20px;
+    }
+
+    .details-container {
+        min-height: auto; /* 在小屏幕设备上不设置最小高度 */
+        margin-bottom: 20px; /* 增加足够的底部边距 */
+      }
+    
+      .buttonClass {
+        padding: 10px; /* 或者根据需要调整间距 */
+      }
+  }
+  
