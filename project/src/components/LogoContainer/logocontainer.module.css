@@ -1,0 +1,20 @@
+.logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+  }
+  
+  .logo {
+    width: 100px; 
+    height: auto;
+  }
+
+  .logoTitle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #7F61A9;
+      font-family: Koulen;
+      font-weight: 400;
+  }

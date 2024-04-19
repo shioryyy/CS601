@@ -1,0 +1,58 @@
+.users {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.userImage {
+    width: 128px;
+    height: 128px;
+    border-radius: 100%;
+}
+
+.userName {
+    margin: 0;
+}
+
+.connectBtn,
+.acceptBtn {
+    border: 1px solid #604DCF;
+    padding: 0.5rem;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.connectBtn:hover,
+.acceptBtn:hover {
+    background-color: #604DCF;
+    color: white;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: flex-start;
+}
+
+
+
+.requests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem
+}
+
+.imgContainer {
+    width: 208px;
+    display: grid;
+    place-items: center;
+    height: auto;
+    border-radius: 100%;
+}

@@ -1,0 +1,140 @@
+/* register.module.css */
+
+
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .registerContainer {
+      max-width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+      justify-content: center; 
+    }
+  
+  .registerContainer h2 {
+    text-align: center;
+  }
+  
+ form{
+  width: 30%;
+ }
+
+  .formGroup {
+    position: relative;
+    display: inline-block; 
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .formGroup label {
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+
+  .formGroup input {
+    padding: 8px 10px;  
+    border: 1px solid #ccc;
+    border-radius: 4px;  
+    font-size: 16px;
+    transition: border-color 0.3s;  
+}
+
+  .formGroup input:focus {
+    border-color: #007BFF;  /* 获得焦点时的边框颜色，可以根据你的品牌颜色调整 */
+    outline: none;  /* 移除浏览器默认的轮廓 */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .passwordContainer {
+    position: relative;
+    display: inline-block; 
+  }
+
+  .registerBtn{
+    background: #7F61A9;
+  }
+
+  .googleSignIn{
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    gap:1rem;
+    border: 1px solid black;
+    padding: 0 1rem;
+    border-radius: 10px;
+    width: 100%;
+    height: 50px
+   }
+
+   .registerBtn{
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+   }
+   
+   p{
+    margin: 0;
+   }
+
+   @media  screen and (max-width:900px) {
+    
+    .GSignInBtn{
+        font-size: 67%;
+    }
+ }
+
+ @media  screen and (max-width:590px) {
+    
+    .GSignInBtn{
+        font-size: 50%;
+    }
+ }
+
+ @media  screen and (max-width:450px) {
+    
+    .GSignInBtn{
+display: none;
+    }
+ }

@@ -1,0 +1,83 @@
+.bannerContainer {
+    display: flex;
+    transform: rotate(0.052deg);
+    padding: 16px;
+    align-items: flex-start;
+    border-radius: 16px;
+    background: var(--info-focus, #E2E7FF);
+    margin: 1rem;
+}
+
+.bannerTitles {
+    margin: auto;
+}
+
+.bannerText {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-self: stretch;
+    margin: auto;
+}
+
+
+.bannerText1 {
+    display: flex;
+    height: 35px;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    color: #0A0A0A;
+    font-family: ABeeZee;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+}
+
+.bannerText2 {
+    display: flex;
+    height: 35px;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--gray-02100, #0A0A0A);
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.bannerImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 7px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.banner {
+    width: 209px;
+    height: 164px;
+
+}
+
+@media screen and (max-width: 970px) {
+
+    .bannerImg {
+        display: none;
+    }
+
+    .bannerText {
+        gap: 0
+    }
+
+    .bannerText1 {
+        font-size: 100%;
+    }
+
+    .bannerText2 {
+        font-size: 85%;
+    }
+}

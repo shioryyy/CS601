@@ -1,0 +1,134 @@
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.userImage {
+    width: 63px;
+    height: 63px;
+}
+
+p {
+    margin: 0;
+}
+
+.name {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+}
+
+.jobTitle {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+}
+
+.viewProfileBtn,
+.viewProfileBtn:hover {
+    display: flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 6px;
+    background: var(--primary-main, #604DCF);
+    color: var(--gray-0210, #FFF);
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+/* MENU */
+.menu,
+.job_tabs {
+    display: flex;
+    padding-left: 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+}
+
+.menuItemLink,
+.JobmenuItem,
+.homeMenuItemLink {
+    display: flex;
+    padding: 0 1rem;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-right: 2px solid var(--primary-main, #604DCF);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.homeMenuItemLink {
+    padding: 0;
+}
+
+
+.menuItem,
+.jobItem {
+    display: flex;
+    padding: 0 1rem;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    cursor: pointer;
+}
+
+.jobItem {
+    margin-left: 1rem;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+}
+
+.menuText {
+    color: var(--gray-02100, #0A0A0A);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    padding-top: 1rem;
+}
+
+.job_tabs {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media screen and (max-width:750px) {
+
+    .menu {
+        display: none;
+    }
+}
