@@ -38,12 +38,6 @@ const Register = () => {
       });
   };
 
-  const [showPassword, setShowPassword] = useState(false);
-
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
-
   const handleGoogleSignIn = () => {
     const provider = new GoogleAuthProvider();
     const auth = getAuth();
@@ -125,7 +119,7 @@ const Register = () => {
             <label htmlFor="password">Password:</label>
             <div className={styles.passwordContainer}>
               <input
-                type={showPassword ? "text" : "password"}
+                type={"password"}
                 id="password"
                 {...register("password", {
                   required: "Password is required!",

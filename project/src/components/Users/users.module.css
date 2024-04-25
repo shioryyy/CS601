@@ -22,7 +22,7 @@
 
 .connectBtn,
 .acceptBtn {
-    border: 1px solid #604DCF;
+    border: 1px solid #429CE3;
     padding: 0.5rem;
     border-radius: 25px;
     background-color: white;
@@ -30,7 +30,7 @@
 
 .connectBtn:hover,
 .acceptBtn:hover {
-    background-color: #604DCF;
+    background-color: #429CE3;
     color: white;
 }
 

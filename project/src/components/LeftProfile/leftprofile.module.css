@@ -51,7 +51,7 @@ p {
     align-items: center;
     gap: 4px;
     border-radius: 6px;
-    background: var(--primary-main, #604DCF);
+    background: var(--primary-main, #429CE3);
     color: var(--gray-0210, #FFF);
     text-align: center;
     font-family: Inter;
@@ -80,7 +80,7 @@ p {
     align-items: center;
     gap: 8px;
     align-self: stretch;
-    border-right: 2px solid var(--primary-main, #604DCF);
+    border-right: 2px solid var(--primary-main, #429CE3);
     cursor: pointer;
     text-decoration: none;
 }
