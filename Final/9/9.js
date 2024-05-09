@@ -7,4 +7,7 @@ Array.from(colors).forEach((color, index) => {
     }
 });
 
+console.log("colors", colors);
+console.log("colorMap", colorMap);
+
 module.exports = colorMap;

@@ -7,4 +7,6 @@ const object = {
 
 const { title } = object;
 
+console.log("title, except to be 'Exam'.", title);
+
 module.exports = title;

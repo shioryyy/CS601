@@ -9,16 +9,26 @@
     <h1>Tests</h1>
     <p>Test: [1, 2, 3] is an array?</p>
     <p id="test1"></p>
-    <p>Test: "123" is an array?</p>
+    <p>Test: "Hello" is an array?</p>
     <p id="test2"></p>
+    <p>Test: "123" is an array?</p>
+    <p id="test3"></p>
+    <p>Expected output:</p>
+    <p id="expected">[1, 2, 3] is an array: true</p>
+    <p id="expected">"Hello" is an array: false</p>
+    <p id="expected">"123" is an array: false</p>
 
     <script>
       document.getElementById("test1").textContent = JSON.stringify(
         get3Segments([1, 2, 3])
       );
       document.getElementById("test2").textContent = JSON.stringify(
+        get3Segments("Hello")
+      );
+      document.getElementById("test3").textContent = JSON.stringify(
         get3Segments("123")
       );
+      
     </script>
   </body>
 </html>
