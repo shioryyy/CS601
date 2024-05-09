@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Positive Even Numbers</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  input {
+    padding: 5px;
+    margin: 10px;
+  }
+  button {
+    padding: 5px 10px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+  #results {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+</style>
+</head>
+<body>
+<h1>Enter Positive Even Numbers</h1>
+<input type="number" id="numberInput" placeholder="Enter a positive even number">
+<button onclick="addNumber()">Submit</button>
+<button onclick="showNumbers()">Show All Numbers</button>
+<div id="results"></div>
+
+<script>
+  const numbersSet = new Set();
+
+  function addNumber() {
+    const numInput = document.getElementById('numberInput');
+    const num = parseInt(numInput.value);
+    if (num > 0 && num % 2 === 0) {
+      numbersSet.add(num);
+      alert("Number added successfully.");
+    } else {
+      alert("Please enter a positive even number.");
+    }
+    numInput.value = ''; // Clear the input field
+  }
+
+  function showNumbers() {
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = '<strong>Stored Numbers:</strong> ' + Array.from(numbersSet).join(', ');
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome Checker</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      input {
+        padding: 10px;
+        margin-bottom: 10px;
+        width: 300px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      #message {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid;
+        border-radius: 5px;
+        opacity: 0;
+        transition: opacity 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Palindrome Checker</h1>
+    <input type="text" id="palindromeInput" placeholder="Enter a text" />
+    <button onclick="checkPalindrome()">Check</button>
+    <div id="message"></div>
+
+    <script>
+      function checkPalindrome() {
+        const input = document.getElementById("palindromeInput").value;
+        const normalizedInput = input.toLowerCase().replace(/[^a-z0-9]+/gi, "");
+        const isPalindrome =
+          normalizedInput.split("").reverse().join("") === normalizedInput;
+
+        const messageDiv = document.getElementById("message");
+        messageDiv.style.opacity = "1";
+
+        if (isPalindrome && normalizedInput !== "") {
+          messageDiv.textContent = "This is valid";
+          setTimeout(() => {
+            messageDiv.style.opacity = "0";
+          }, 4000);
+        } else {
+          messageDiv.textContent = "Not a palindrome";
+          setTimeout(() => {
+            messageDiv.style.opacity = "0";
+          }, 5000);
+        }
+      }
+    </script>
+  </body>
+</html>

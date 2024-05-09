@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tests</title>
+    <script src="10.js"></script>
+  </head>
+
+  <body>
+    <h1>Tests</h1>
+    <p>Test: [1, 2, 3] is an array?</p>
+    <p id="test1"></p>
+    <p>Test: "123" is an array?</p>
+    <p id="test2"></p>
+
+    <script>
+      document.getElementById("test1").textContent = JSON.stringify(
+        get3Segments([1, 2, 3])
+      );
+      document.getElementById("test2").textContent = JSON.stringify(
+        get3Segments("123")
+      );
+    </script>
+  </body>
+</html>
