@@ -1,4 +1,3 @@
-// Import language module
 import { languages } from './languages.js';
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -25,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         result.textContent = '';
     }
 
+    fahrenheitInput.addEventListener('input', convertTemperature);
     convertBtn.addEventListener('click', convertTemperature);
     languageSelect.addEventListener('change', updateLanguage);
 
